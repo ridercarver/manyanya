@@ -1,0 +1,27 @@
+/* navigation
+$navigation: $baseline * 3
+
+nav.nav
+  :text-align center
+  +children-inline
+  
+  > a
+    :padding
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+    :line-height $navigation
+    :font
+      :size $baseline * 1.2
+    :border 1px solid $blue
+    
+    & + *
+      :margin
+        :left -1px
+    
+    &:first-child
+      +border-radius-top-left($navigation / 2)
+      +border-radius-bottom-left($navigation / 2)
+    
+    &:last-child
+      +border-radius-top-right($navigation / 2)
+      +border-radius-bottom-right($navigation / 2)

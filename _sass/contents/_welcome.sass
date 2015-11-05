@@ -1,0 +1,83 @@
+/* welcome page
+
+#container.welcome
+  :text-align center
+  
+  > header
+    :padding
+      :top $baseline * 5
+      :bottom $baseline * 5
+    :height $baseline * 19.5
+    :background $light_blue url(/assets/images/backgrounds/welcome_header.png) left top
+    +children-inline
+    
+    > h1
+      :height 100%
+      
+      > svg
+        :height 100%
+      
+      > span
+        :display none
+      
+      & + *
+        :margin
+          :left $ninesixty_gutter_width * 4
+    
+    > div
+      :width $ninesixty_gutter_width * 27
+      :height 100%
+      :padding
+        :top $baseline * 2.5
+      :font
+        :size $baseline * 1.2
+      
+      > span
+        :display block
+        :color $lightest_blue
+        :line-height $baseline * 1.5
+        
+        & + *
+          :margin
+            :top $baseline / 2
+        
+      > a
+        :position relative
+        +inline-block
+        :line-height $baseline * 3
+        :background $white
+        :padding
+          :left $ninesixty_gutter_width * 3
+          :right $ninesixty_gutter_width * 3
+        +border-radius($baseline * 1.5)
+        :color $blue
+        +inverse-hover-underline
+        
+        > svg
+          :position absolute
+          :width $ninesixty_gutter_width * 3
+          :top 0
+          :left -$ninesixty_gutter_width / 2
+        
+        > span
+          :color $lightest_blue
+        
+        > b
+          :font
+            :family "Ubuntu Medium", Arial, sans-serif
+            :weight normal
+    
+    & + .navigation
+      :margin
+        :top -($navigation / 2 + $ninesixty_gutter_width)
+      
+      > nav
+        :background $white
+        :padding $ninesixty_gutter_width
+        +border-radius($navigation / 2 + $ninesixty_gutter_width)
+        
+        > a
+          :background $white
+
+  > .navigation
+    +children-inline
