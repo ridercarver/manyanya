@@ -10,13 +10,13 @@
   :font-family "Ubuntu Light"
   :font-style normal
   :font-weight light
-  :src local("Ubuntu Light") , url({{"/assets/fonts/Ubuntu-Light.eot" | prepend: site.baseurl | prepend: site.url}}) format("oet"), local("Ubuntu Light"), url({{"/assets/fonts/Ubuntu-Light.woff" | prepend: site.baseurl | prepend: site.url}}) format("woff"), local("Ubuntu Light"), url({{"/assets/fonts/Ubuntu-Light.ttf" | prepend: site.baseurl | prepend: site.url}}) format("truetype"), url({{"/assets/fonts/Ubuntu-Light.svg" | prepend: site.baseurl | prepend: site.url}}) format('svg')
+  :src local("Ubuntu Light") , url(../fonts/Ubuntu-Light.eot) format("oet"), local("Ubuntu Light"), url(../fonts/Ubuntu-Light.woff) format("woff"), local("Ubuntu Light"), url(../fonts/Ubuntu-Light.ttf) format("truetype"), url(../fonts/Ubuntu-Light.svg) format('svg')
 
 @font-face
   :font-family "Ubuntu Medium"
   :font-style normal
   :font-weight medium
-  :src local("Ubuntu Medium") , url({{"/assets/fonts/Ubuntu-Medium.eot" | prepend: site.baseurl | prepend: site.url}}) format("oet"), local("Ubuntu Medium"), url({{"/assets/fonts/Ubuntu-Medium.woff" | prepend: site.baseurl | prepend: site.url}}) format("woff"), local("Ubuntu Medium"), url({{"/assets/fonts/Ubuntu-Medium.ttf" | prepend: site.baseurl | prepend: site.url}}) format("truetype"), url({{"/assets/fonts/Ubuntu-Medium.svg" | prepend: site.baseurl | prepend: site.url}}) format('svg')
+  :src local("Ubuntu Medium") , url(../fonts/Ubuntu-Medium.eot) format("oet"), local("Ubuntu Medium"), url(../fonts/Ubuntu-Medium.woff) format("woff"), local("Ubuntu Medium"), url(../fonts/Ubuntu-Medium.ttf) format("truetype"), url(../fonts/Ubuntu-Medium.svg) format('svg')
 
 /* master
 
@@ -62,7 +62,7 @@ body
   :min-width $min_width
   :height 100%
   :line-height $baseline
-  :background $white url(/assets/images/backgrounds/main.png) left (-$baseline * 1.5)
+  :background $white url(../images/backgrounds/main.png) left (-$baseline * 1.5)
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   html

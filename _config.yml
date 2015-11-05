@@ -2,7 +2,7 @@
 title: Маняня
 email: pochta@manyanya03.ru
 description: Клуб детей, родителей и нянь.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/manyanya/" # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site
 
 # Build settings
