@@ -9,6 +9,8 @@
       :bottom $baseline * 5
     :height $baseline * 19.5
     :background $light_blue url(../images/backgrounds/welcome_header.png) left top
+    :background
+      :attachment fixed
     +children-inline
     
     > h1
@@ -70,14 +72,85 @@
     & + .navigation
       :margin
         :top -($navigation / 2 + $ninesixty_gutter_width)
-      
-      > nav
-        :background $white
-        :padding $ninesixty_gutter_width
-        +border-radius($navigation / 2 + $ninesixty_gutter_width)
-        
-        > a
-          :background $white
 
   > .navigation
     +children-inline
+    
+    > nav
+      :background $white
+      :padding $ninesixty_gutter_width
+      +border-radius($navigation / 2 + $ninesixty_gutter_width)
+  
+  > section
+    :position relative
+    :overflow hidden
+    :text-align left
+    +grid-container($ninesixty_gutter_width * 80)
+    :padding
+      :left $ninesixty_gutter_width * 8
+      :right $ninesixty_gutter_width * 8
+      :top $baseline * 4
+      :bottom $baseline * 13.5
+    
+    > h2
+      :line-height $baseline * 4
+      :font
+        :size $baseline * 3.6
+      :padding
+        :left $ninesixty_gutter_width * 4
+        :right $ninesixty_gutter_width * 4
+      
+      & + p
+        :margin
+          :top $baseline * 2
+    
+    > p
+      :color $blue
+      :font
+        :size $baseline * 1.2
+      :line-height $baseline * 1.5
+      :padding
+        :left $ninesixty_gutter_width * 4
+        :right $ninesixty_gutter_width * 4
+      
+      & + a
+        :margin
+          :top $baseline * 4
+    
+    > a
+      :position relative
+      +inline-block
+      :font
+        :size $baseline * 1.8
+        :family "Ubuntu Medium", Arial, sans-serif
+      :line-height $baseline * 4.5
+      :color $white
+      :background $blue
+      :padding
+        :left $ninesixty_gutter_width * 12
+        :right $ninesixty_gutter_width * 5
+      +border-radius($baseline * 2.25)
+      +hover-opacity
+      
+      > svg
+        :position absolute
+        :height 100%
+        :left $ninesixty_gutter_width * 2.5
+        :top 0
+    
+    > .birds
+      :position absolute
+      :bottom -$baseline
+      :right 0
+      :width $ninesixty_gutter_width * 31
+      
+      > svg
+        :width 100%
+        +opacity(0.5)
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container.welcome > section
+    :width $ninesixty_gutter_width * 64
+    :padding
+      :left 0
+      :right 0

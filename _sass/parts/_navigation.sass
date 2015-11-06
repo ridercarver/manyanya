@@ -6,13 +6,23 @@ nav.nav
   +children-inline
   
   > a
+    :background $white
     :padding
-      :left $ninesixty_gutter_width * 3
-      :right $ninesixty_gutter_width * 3
+      :left $ninesixty_gutter_width * 2
+      :right $ninesixty_gutter_width * 2
     :line-height $navigation
     :font
       :size $baseline * 1.2
     :border 1px solid $blue
+    +transition-property(opacity, background, color)
+    
+    &:hover
+      :background $blue_transparent
+    
+    &.active
+      :background $blue
+      :color $white
+      :cursor default
     
     & + *
       :margin

@@ -27,7 +27,7 @@ $ninesixty_gutter_width: $baseline / 2
 $ninesixty_grid_width: 100%
 $ninesixty_columns: 8
 
-$min_width: $ninesixty_gutter_width * 64
+$min_width: $ninesixty_gutter_width * 80
 $max_width: $ninesixty_gutter_width * 144
 
 html
@@ -42,6 +42,7 @@ html, html a
   :color $dark_blue
 
 *
+  +transition(opacity .4s cubic-bezier(0.445, 0.05, 0.55, 0.95))
   :outline none !important
   +children-list-fix
 
@@ -63,6 +64,8 @@ body
   :height 100%
   :line-height $baseline
   :background $white url(../images/backgrounds/main.png) left (-$baseline * 1.5)
+  :overflow auto
+  :overflow-y overlay
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   html
