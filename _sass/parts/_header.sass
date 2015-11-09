@@ -41,3 +41,28 @@ $header: $baseline * 12
       :top -$header
     :padding
       :top $header
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container:not(.welcome) > header
+    :padding
+      :top $baseline
+      :bottom $baseline
+    
+    > *
+      :display block
+    
+    > h1
+      :height $header - $navigation * 2 - $baseline * 4
+      
+      & + *
+        :margin
+          :left 0
+          :top $baseline
+    
+    > nav + *
+      :margin
+        :left 0
+        :top $baseline
+    
+    .sign-up-button
+      +inline-block

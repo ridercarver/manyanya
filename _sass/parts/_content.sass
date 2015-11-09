@@ -24,3 +24,7 @@
       & + *
         :margin
           :top $baseline * 4
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > .content > section > *
+    +grid-container($ninesixty_gutter_width * 64)
