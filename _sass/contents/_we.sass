@@ -1,0 +1,48 @@
+/* we page
+
+#container > .content.we > section
+  > ul
+    > li
+      :position relative
+      :padding
+        :left $ninesixty_gutter_width * 25
+      
+      > svg
+        :position absolute
+        :left 0
+        :top 50%
+        :width $ninesixty_gutter_width * 22
+        :margin
+          :top -$baseline * 5 * 22 / 35 
+      
+      > p
+        :font
+          :size $baseline * 1.8
+        :line-height $baseline * 2.5
+        
+        & + *
+          :margin
+            :top $baseline
+      
+      > span
+        :display block
+        :color $light_blue
+        :font
+          :size $baseline * 1.2
+        :line-height $baseline * 1.5
+      
+      & + li
+        :margin
+          :top $baseline * 4
+    
+    & + *
+      :margin
+        :top $baseline * 4
+  
+  > p
+    :font
+      :size $baseline * 1.8
+    :line-height $baseline * 2.5
+    
+    > span
+      :color $light_blue

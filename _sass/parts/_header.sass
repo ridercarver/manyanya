@@ -1,0 +1,43 @@
+/* header
+$header: $baseline * 12
+
+#container:not(.welcome) > header
+  :height $header
+  :border
+    :bottom 1px solid $blue
+    :bottom
+      :color $blue_transparent
+  :padding
+    :top ($header - $navigation) / 2
+    :bottom ($header - $navigation) / 2
+  :background $light_yellow
+  :text-align center
+  +children-inline
+  
+  > h1
+    :height 100%
+    
+    > a
+      :display block
+      :height 100%
+      +hover-opacity
+      
+      > svg
+        :height 100%
+      
+      > span
+        :display none
+      
+    & + *
+      :margin
+        :left $ninesixty_gutter_width * 4
+  
+  > nav + *
+    :margin
+      :left $ninesixty_gutter_width * 6
+  
+  & + .content
+    :margin
+      :top -$header
+    :padding
+      :top $header

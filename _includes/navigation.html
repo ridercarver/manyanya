@@ -1,6 +1,6 @@
 <nav class="nav">
-  <a>Почему мы?</a>
-  <a>Зачем клуб?</a>
-  <a>Как работаем?</a>
-  <a>Контакты</a>
+  <a href="{{'/we' | prepend: site.baseurl}}" class="{% if page.navigation == 'we' %}{{ 'active' }}{% endif %}">Почему мы?</a>
+  <a href="{{'/club' | prepend: site.baseurl}}" class="{% if page.navigation == 'club' %}{{ 'active' }}{% endif %}">Зачем клуб?</a>
+  <a href="{{'/work' | prepend: site.baseurl}}" class="{% if page.navigation == 'work' %}{{ 'active' }}{% endif %}">Как работаем?</a>
+  <a href="{{'/contacts' | prepend: site.baseurl}}" class="{% if page.navigation == 'contacts' %}{{ 'active' }}{% endif %}">Контакты</a>
 </nav>

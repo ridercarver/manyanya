@@ -1,0 +1,34 @@
+/* sign up button
+
+.sign-up-button
+  :position relative
+  +inline-block
+  :font
+    :size $baseline * 1.2
+  :line-height $navigation
+  :color $white
+  :background $blue
+  :padding
+    :left $ninesixty_gutter_width * 7
+    :right $ninesixty_gutter_width * 3
+  +border-radius($navigation / 2)
+  +hover-opacity
+  
+  > svg
+    :position absolute
+    :height 100%
+    :left $ninesixty_gutter_width
+    :top 0
+  
+  &.big
+    :font
+      :size $baseline * 1.8
+      :family "Ubuntu Medium", Arial, sans-serif
+    :line-height $baseline * 4.5
+    +border-radius($baseline * 2.25)
+    :padding
+      :left $ninesixty_gutter_width * 12
+      :right $ninesixty_gutter_width * 5
+    
+    > svg
+      :left $ninesixty_gutter_width * 2.5
