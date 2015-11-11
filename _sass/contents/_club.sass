@@ -1,0 +1,58 @@
+/* club page
+
+#container > .content.club > section
+  > .list
+    :width 100%
+    :overflow hidden
+  
+    > ul
+      +grid-container($ninesixty_gutter_width * 100)
+    
+      > li
+        :position relative
+      
+        > svg
+          :position absolute
+          :height 140%
+          :top -20%
+          :overflow visible
+      
+        > h3
+          :color $blue
+          :font
+            :size $baseline * 3.6
+          :line-height $baseline * 4
+        
+          & + *
+            :margin
+              :top $baseline * 2
+      
+        > p
+          :font
+            :size $baseline * 1.8
+          :line-height $baseline * 2.5
+      
+        &:nth-child(even)
+          :margin
+            :left 30%
+          :width 70%
+        
+          > svg
+            :left 100%
+            :margin
+              :left $ninesixty_gutter_width * 6
+      
+        &:nth-child(odd) > svg
+          :right 100%
+          :margin
+            :right $ninesixty_gutter_width * 6
+        
+        &:first-child > svg
+          :top 0
+        
+        &:last-child > svg
+          :top -40%
+      
+        & + li
+          :margin
+            :top $baseline * 4
