@@ -1,0 +1,177 @@
+/* work page
+
+#container > .content.work > section
+  > .birds
+    +children-inline
+    :text-align center
+    
+    > svg
+      :height $baseline * 16
+    
+  > section
+    :width 100%
+    :background $light_blue url(../images/backgrounds/welcome_header.png) left top
+    :background
+      :attachment fixed
+    
+    > div
+      :position relative
+      +grid-container($ninesixty_gutter_width * 100)
+      :padding
+        :left $ninesixty_gutter_width * 20
+        :top $baseline * 4
+        :bottom $baseline * 4
+      
+      > svg
+        :position absolute
+        :width $ninesixty_gutter_width * 27
+        :left -$ninesixty_gutter_width * 17
+        :top $baseline * 6
+      
+      > p
+        :color $white
+        :font
+          :size $baseline * 1.8
+        :line-height $baseline * 4
+      
+        > b, > span
+          :display block
+          :font
+            :size $baseline * 3.6
+        
+        > b
+          :font
+            :family "Ubuntu Medium", Arial, sans-serif
+            :weight normal
+        
+        > span
+          :color $lightest_blue
+        
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > ul
+        > li
+          :position relative
+          :padding
+            :top $baseline
+            :bottom $baseline
+          
+          > p
+            :color $white
+            :font
+              :size $baseline * 1.8
+            :line-height $baseline * 2
+            
+            & + *
+              :margin
+                :top $baseline
+          
+          > span
+            :display block
+            :color $lightest_blue
+            :font
+              :size $baseline * 1.2
+            :line-height $baseline * 2
+        
+          &:before
+            :content ''
+            :position absolute
+            :background $white
+            :width $baseline / 2
+            :height $baseline / 2
+            :top $baseline * 1.75
+            +border-radius($baseline / 4)
+            :left -$ninesixty_gutter_width * 4
+    
+    & + *
+      :margin
+        :top $baseline * 4
+  
+  > ul
+    > li
+      :position relative
+      :padding
+        :left $ninesixty_gutter_width * 20
+        :top $baseline * 1.25
+      
+      > span
+        :position absolute
+        :left 0
+        :top 0
+        :font
+          :size $baseline * 3.6
+        :width $baseline * 6.5
+        :height $baseline * 6.5
+        :line-height $baseline * 6
+        :border $baseline / 4 solid $blue
+        +border-radius($baseline * 3.25)
+        :text-align center
+      
+      > h3
+        :color $blue
+        :font
+          :size $baseline * 3.6
+        :line-height $baseline * 4
+      
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > b
+        +inline-block
+        :padding
+          :left $ninesixty_gutter_width * 5
+          :right $ninesixty_gutter_width * 5
+          :top $baseline
+          :bottom $baseline
+        :margin
+          :left -($ninesixty_gutter_width * 5 + $baseline / 4)
+        :border $baseline / 4 solid $blue
+        +border-radius($baseline * 2)
+        :font
+          :size $baseline * 1.8
+          :weight normal
+        :line-height $baseline * 4
+        
+        > b
+          :display block
+          :font
+            :size $baseline * 3.6
+            :family "Ubuntu Medium", Arial, sans-serif
+            :weight normal
+          :color $blue
+          
+          > span
+            :font
+              :size $baseline * 1.8
+          
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > p
+        :font
+          :size $baseline * 1.8
+        :line-height $baseline * 2.5
+        
+        > a
+          +hover-underline
+          :color $blue
+        
+        & + *
+          :margin
+            :top $baseline * 3
+      
+      & + *
+        :margin
+          :top $baseline * 4
+    
+    & + *
+      :margin
+        :top $baseline * 4
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > .content.work > section > section > div
+    +grid-container($ninesixty_gutter_width * 64)
