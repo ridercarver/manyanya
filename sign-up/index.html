@@ -1,0 +1,29 @@
+---
+layout: default
+navigation: sign-up
+---
+
+<form>
+  <label for="name">Имя и Фамилия</label>
+  <div class="field">
+    <input type="text" id="name" name="name" required placeholder="Марина Пирожкова" />
+  </div>
+  <label for="message">Номер телефона</label>
+  <div class="field">
+    <input type="text" id="phone" name="phone" required placeholder="Введите номер телефона" />
+  </div>
+  <label for="email">Ваша электронная почта</label>
+  <div class="field">
+    <input type="email" id="email" name="email" required placeholder="maripiro@hotbox.com" />
+  </div>
+  <label for="message">Примечания</label>
+  <div class="field">
+    <textarea id="message" name="message" placeholder="Возраст ребёнка, домашние животные
+или что-то ещё…"></textarea>
+  </div>
+  <div class="checkbox">
+    <input type="checkbox" name="agree" id="agree" value="yes" required />
+    <label for="agree">Я принимаю <a href="#">условия соглашения</a> клуба маняня</label>
+  </div>
+  <input type="submit" value="Отправить" />
+</form>

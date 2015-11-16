@@ -1,4 +1,4 @@
-<header>
+<header class="{{page.navigation}}">
   <h1>
     <a href="{{'/' | prepend: site.baseurl}}">
       {% include images/birds.svg %}
@@ -7,4 +7,12 @@
   </h1>
   {% include navigation.html %}
   {% include sign_up_button.html %}
+  {% if page.navigation == 'sign-up' %}
+    <div class="sign-up">
+      <nav>
+        <a href="#parent" class="active"><span>Заявка родителя</span></a>
+        <a href="#jobseeker"><span>Заявка соискателя</span></a>
+      </nav>
+    </div>
+  {% endif %}
 </header>

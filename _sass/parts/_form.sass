@@ -2,6 +2,9 @@
 
 form
   label
+    :cursor pointer
+  
+  > label
     :width $ninesixty_gutter_width * 50
     :display block
     :font
@@ -56,3 +59,45 @@ form
       :right $ninesixty_gutter_width * 3
     +border-radius($baseline * 1.5)
     +hover-opacity
+  
+  .checkbox
+    :width $ninesixty_gutter_width * 50
+    :line-height $baseline * 1.5
+    :font
+      :size $baseline * 0.9
+    :padding
+      :left $ninesixty_gutter_width
+    +children-inline
+    
+    > input
+      :position relative
+      :margin $ninesixty_gutter_width * 0.3
+      :width $ninesixty_gutter_width * 2.4
+      :height $ninesixty_gutter_width * 2.4
+      :border 1px solid $lightest_blue
+      :background $white
+      +border-radius($ninesixty_gutter_width * 1.2)
+      +transition-property(opacity, background, border-color)
+      
+      &:before
+        :content ''
+        +absoluted
+        :border $ninesixty_gutter_width * 0.3 solid $white
+        +border-radius($ninesixty_gutter_width * 1.2)
+      
+      &:checked
+        :background $blue
+        :border-color $blue
+      
+      & + *
+        :margin
+          :left $ninesixty_gutter_width
+    
+    > label
+      > a
+        +inverse-hover-underline
+        :color $lightest_blue
+    
+    & + *
+      :margin
+        :top $baseline * 2.5

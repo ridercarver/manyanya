@@ -78,3 +78,14 @@ $footer: $baseline * 9
     
     &:hover > svg
       +opacity(1)
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > .content > section > footer
+    > section, > aside
+      :width $ninesixty_gutter_width * 64
+    
+    > aside > a
+      :height 100%
+      
+      > span
+        :display none

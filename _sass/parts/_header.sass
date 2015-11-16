@@ -1,5 +1,6 @@
 /* header
 $header: $baseline * 12
+$big_header: $baseline * 14
 
 #container:not(.welcome) > header
   :height $header
@@ -35,12 +36,59 @@ $header: $baseline * 12
   > nav + *
     :margin
       :left $ninesixty_gutter_width * 6
-  
+
+  > .sign-up
+    :position relative
+    :margin
+      :top $baseline * 3.5
+    +children-inline
+    
+    > nav
+      :background #E9F5FA
+      +border-radius($baseline * 2.5)
+      +children-inline
+    
+      > a
+        :padding
+          :left $ninesixty_gutter_width * 4
+          :right $ninesixty_gutter_width * 4
+        :line-height $baseline * 5
+        :font
+          :size $baseline * 1.8
+        :color $lightest_blue
+        +border-radius($baseline * 2.5)
+        +hover-underline
+        
+        > span
+          :color $dark_blue
+      
+        &.active
+          :cursor default
+          :background $blue
+          
+          &:hover
+            :text-decoration none
+    
+    & + *
+      :margin
+        :top $baseline * 4
+    
   & + .content
     :margin
       :top -$header
     :padding
       :top $header
+  
+  &.sign-up
+    :height $big_header
+    :padding
+      :bottom ($big_header - $navigation) / 2 + ($big_header - $navigation) / 2 - ($header - $navigation) / 2
+    
+    & + .content
+      :margin
+        :top -$header - $baseline * 2.5
+      :padding
+        :top $header + $baseline * 2.5
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container:not(.welcome) > header
@@ -66,3 +114,12 @@ $header: $baseline * 12
     
     .sign-up-button
       +inline-block
+    
+    > .sign-up
+      :margin
+        :top $baseline
+    
+    &.sign-up
+      :padding
+        :top $baseline
+        :bottom $baseline
