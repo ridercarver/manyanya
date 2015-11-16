@@ -4,3 +4,41 @@ navigation: contacts
 ---
 
 <h2>Контакты маняни</h2>
+<div class="contacts">
+  <a href="callto:+73012212227">
+    <img src="{{ "/assets/images/icons/phone.png" | prepend: site.baseurl }}" />
+    <span><span>+7 3012</span> 21 22 27</span>
+  </a>
+  <a href="mailto:pochta@manyanya03.ru">
+    <img src="{{ "/assets/images/icons/mail.png" | prepend: site.baseurl }}" />
+    <span>pochta@manyanya03.ru</span>
+  </a>
+  <a href="http://vk.com/manyanya_03" target="_blank">
+    <img src="{{ "/assets/images/icons/vk.png" | prepend: site.baseurl }}" />
+    <span>manyanya_03</span>
+  </a>
+</div>
+<a class="map" href="https://goo.gl/maps/m5Hxs2iSwKH2" target="_blank">
+  <img src="{{ "/assets/images/backgrounds/map.jpg" | prepend: site.baseurl }}" />
+</a>
+<h2><span>Ждём вас по адресу</span></h2>
+<p>
+  <span>
+    <img src="{{ "/assets/images/icons/marker.png" | prepend: site.baseurl }}" />
+    г. Улан-Удэ, ул. Коммунистическая 22
+    <br />
+    офис 21 (напротив Бин Банка)
+  </span>
+</p>
+<h2>Обратная связь</h2>
+<form>
+  <label for="email">Ваша электронная почта</label>
+  <div class="field">
+    <input type="email" id="email" name="email" placeholder="maripiro@hotbox.com" />
+  </div>
+  <label for="message">Ваша электронная почта</label>
+  <div class="field">
+    <textarea id="message" name="message" placeholder="Есть что сказать? Напишите нам и мы станем ещё лучше!"></textarea>
+  </div>
+  <input type="submit" value="Отправить" />
+</form>

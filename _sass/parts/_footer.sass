@@ -1,0 +1,80 @@
+/* footer
+$footer: $baseline * 9
+
+#container > .content > section > footer
+  :position relative
+  :height $footer
+  :background $blue
+  :font
+    :size $baseline * 1.2
+  :line-height $baseline * 3
+  :color $white
+  :background $light_blue url(../images/backgrounds/welcome_header.png) left top
+  
+  a
+    :color $lightest_blue
+    +inverse-hover-underline
+    
+    > span
+      :color $white
+  
+  > svg
+    :position absolute
+    :height 50%
+    :right 0
+    :bottom 0
+  
+  > section, > aside
+    +grid-container($ninesixty_gutter_width * 100)
+    :height $footer
+    :padding
+      :top ($footer - $baseline * 3) / 2
+      :bottom ($footer - $baseline * 3) / 2
+    +children-inline
+    
+  > section
+    > h1
+      :height 100%
+      
+      > a
+        :overflow hidden
+        :display block
+        :height 100%
+        +hover-opacity
+        
+        > svg
+          :height 150%
+          
+          path
+            :fill $lightest_blue
+        
+        > span
+          :display none
+      
+      & + *
+        :margin
+          :left $ninesixty_gutter_width * 5
+    
+    > p > span
+      :color $lightest_blue
+    
+    & + aside
+      :margin
+        :top -$footer
+  
+  > aside > a
+    :position relative
+    :padding
+      :left $ninesixty_gutter_width * 8
+    
+    > svg
+      :position absolute
+      :height $baseline * 1.5
+      :left 0
+      :top 50%
+      :margin
+        :top -$baseline * 0.75
+      +opacity(0.9)
+    
+    &:hover > svg
+      +opacity(1)

@@ -5,9 +5,11 @@
     <div id="container">
       {% include header.html %}
       <div class="content {{page.navigation}}">
-        <section>{{ content }}</section>
+        <section>
+          {{ content }}
+          {% include footer.html %}
+        </section>
       </div>
-      {% include footer.html %}
     </div>
   </body>
 </html>

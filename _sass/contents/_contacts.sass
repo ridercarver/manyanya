@@ -1,0 +1,101 @@
+/* contacts page
+
+#container > .content.contacts > section
+  > .contacts
+    +grid-container($ninesixty_gutter_width * 90)
+    :padding
+      :top $baseline * 2
+      :left $ninesixty_gutter_width * 7
+      :right $ninesixty_gutter_width * 7
+      :bottom $baseline * 2
+    :background $light_yellow
+    :border 1px solid $lightest_blue
+    +border-radius($baseline * 2)
+    
+    > a
+      :position relative
+      :display block
+      :line-height $baseline * 4.5
+      :font
+        :size $baseline * 1.8
+      :padding
+        :left $ninesixty_gutter_width * 11
+      :color $blue
+      +inverse-hover-underline
+      
+      > span
+        :color $dark_blue
+        :display block
+        
+        > span
+          :color $light_blue
+      
+      > img
+        :position absolute
+        :left 0
+        :top 50%
+        :margin
+          :top -$baseline * 1.25
+        :height $baseline * 2.5
+    
+    & + *
+      :margin
+        :top $baseline * 4
+  
+  > .map
+    :display block
+    :width 100%
+    +hover-opacity
+    
+    > img
+      :width 100%
+      :display block
+    
+    & + h2
+      :position relative
+      :margin
+        :top -$baseline * 6
+      
+      > span
+        +inline-block
+        :background $light_yellow
+        :padding
+          :top $baseline * 2
+          :left $ninesixty_gutter_width * 7
+          :right $ninesixty_gutter_width * 7
+        +border-radius-top-left($baseline * 2)
+        +border-radius-top-right($baseline * 2)
+      
+      & + *
+        :margin
+          :top $baseline * 2
+  
+  > p
+    :font
+      :size $baseline * 1.8
+    :line-height $baseline * 3.5
+    :text-align center
+    
+    > span
+      :position relative
+      +inline-block
+      :text-align left
+      :padding
+        :left $ninesixty_gutter_width * 11
+      
+      > img
+        :position absolute
+        :top 15%
+        :left 0
+        :height 70%
+    
+    & + *
+      :margin
+        :top $baseline * 4
+  
+  > form
+    :width $ninesixty_gutter_width * 80
+    
+    & + *
+      :margin
+        :top $baseline * 4

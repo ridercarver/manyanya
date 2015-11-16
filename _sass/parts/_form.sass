@@ -1,0 +1,58 @@
+/* form
+
+form
+  label
+    :width $ninesixty_gutter_width * 50
+    :display block
+    :font
+      :size $baseline * 1.2
+    :line-height $baseline * 2.5
+    :padding
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+    
+    & + *
+      :margin
+        :top $baseline / 2
+  
+  .field
+    :width $ninesixty_gutter_width * 50
+    :padding
+      :top $baseline * 0.75
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+      :bottom $baseline * 0.75
+    :background $white
+    :border 1px solid $blue
+    +border-radius($baseline * 1.5)
+    
+    input, textarea
+      +inline-block
+      :width 100%
+      :font
+        :size $baseline * 1.2
+      :height $baseline * 1.5
+      :line-height $baseline * 1.5
+      :color $dark_blue
+      :background $white
+    
+    textarea
+      :height $baseline * 9
+    
+    & + *
+      :margin
+        :top $baseline * 2.5
+  
+  input[type="submit"]
+    :cursor pointer
+    :height $baseline * 3
+    :line-height $baseline * 3
+    :background $blue
+    :color $white
+    :font
+      :size $baseline * 1.2
+    :padding
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+    +border-radius($baseline * 1.5)
+    +hover-opacity

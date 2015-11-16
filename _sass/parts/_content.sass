@@ -9,10 +9,9 @@
     :overflow-y overlay
     :padding
       :top $baseline * 4
-      :bottom $baseline * 4
     :height 100%
     
-    > *
+    > *:not(footer)
       +grid-container($ninesixty_gutter_width * 100)
   
     > h2
@@ -26,5 +25,5 @@
           :top $baseline * 4
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
-  #container > .content > section > *
+  #container > .content > section > *:not(footer)
     +grid-container($ninesixty_gutter_width * 64)
