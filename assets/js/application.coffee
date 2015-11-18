@@ -5,7 +5,7 @@ Manyanya = angular.module 'Manyanya', [], ['$interpolateProvider', '$locationPro
   $interpolateProvider.startSymbol('//')
   $interpolateProvider.endSymbol('//')
 
-  $locationProvider.html5Mode enabled: true, requireBase: false
+  # $locationProvider.html5Mode enabled: true, requireBase: false
 ]
 
 Manyanya.controller 'AppCtrl', ['$scope', '$location', ($scope, $location)->
