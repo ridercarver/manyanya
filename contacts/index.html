@@ -31,14 +31,14 @@ navigation: contacts
   </span>
 </p>
 <h2>Обратная связь</h2>
-<form>
-  <label for="email">Ваша электронная почта</label>
+<form name="contactsForm">
+  <label for="email" class="field-label">Ваша электронная почта</label>
   <div class="field">
-    <input type="email" id="email" name="email" placeholder="maripiro@hotbox.com" />
+    <input type="email" id="email" name="email" ng-model="contacts.email" ng-required="true" placeholder="Ваша электронная почта" />
   </div>
-  <label for="message">Написать оператору</label>
+  <label for="message" class="field-label">Написать оператору</label>
   <div class="field">
-    <textarea id="message" name="message" placeholder="Есть что сказать? Напишите нам и мы станем ещё лучше!"></textarea>
+    <textarea id="message" name="message" ng-model="contacts.message" ng-required="true" placeholder="Есть что сказать? Напишите нам и мы станем ещё лучше!"></textarea>
   </div>
-  <input type="submit" value="Отправить" />
+  <input type="submit" value="Отправить" ng-disabled="contactsForm.$invalid" />
 </form>

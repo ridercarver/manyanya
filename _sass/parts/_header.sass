@@ -38,6 +38,7 @@ $big_header: $baseline * 14
       :left $ninesixty_gutter_width * 6
 
   > .sign-up
+    :display block
     :position relative
     :z-index 2
     :margin
@@ -56,17 +57,15 @@ $big_header: $baseline * 14
         :line-height $baseline * 5
         :font
           :size $baseline * 1.8
-        :color $lightest_blue
+        :color $dark_blue
         +border-radius($baseline * 2.5)
-        +transition-property(opacity, background)
-        +hover-underline
-        
-        > span
-          :color $dark_blue
+        +transition-property(opacity, background, color)
       
         &.active
           :cursor default
           :background $blue
+          
+          :color $white
           
           &:hover
             :text-decoration none
