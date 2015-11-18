@@ -39,6 +39,7 @@ $big_header: $baseline * 14
 
   > .sign-up
     :position relative
+    :z-index 1
     :margin
       :top $baseline * 3.5
     +children-inline
@@ -57,6 +58,7 @@ $big_header: $baseline * 14
           :size $baseline * 1.8
         :color $lightest_blue
         +border-radius($baseline * 2.5)
+        +transition-property(opacity, background)
         +hover-underline
         
         > span
@@ -86,9 +88,9 @@ $big_header: $baseline * 14
     
     & + .content
       :margin
-        :top -$header - $baseline * 2.5
+        :top -$header - $baseline * 2
       :padding
-        :top $header + $baseline * 2.5
+        :top $header + $baseline * 2
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container:not(.welcome) > header

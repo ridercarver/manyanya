@@ -4,22 +4,31 @@ form
   label
     :cursor pointer
   
-  > label
-    :width $ninesixty_gutter_width * 50
+  .field-label
+    :width $ninesixty_gutter_width * 48.5
     :display block
     :font
       :size $baseline * 1.2
-    :line-height $baseline * 2.5
+    :line-height $baseline * 1.5
     :padding
+      :top $baseline / 2
       :left $ninesixty_gutter_width * 3
       :right $ninesixty_gutter_width * 3
+      :bottom $baseline / 2
+    
+    &.big
+      :width 100%
     
     & + *
       :margin
         :top $baseline / 2
   
+  .form-group + *
+    :margin
+      :top $baseline * 2.5
+  
   .field
-    :width $ninesixty_gutter_width * 50
+    :width $ninesixty_gutter_width * 48.5
     :padding
       :top $baseline * 0.75
       :left $ninesixty_gutter_width * 3
@@ -42,6 +51,9 @@ form
     textarea
       :height $baseline * 9
     
+    &.big
+      :width 100%
+    
     & + *
       :margin
         :top $baseline * 2.5
@@ -59,14 +71,20 @@ form
       :right $ninesixty_gutter_width * 3
     +border-radius($baseline * 1.5)
     +hover-opacity
+    
+    &[disabled]
+      :cursor default
+      +opacity(0.5)
+      
+      &:hover
+        +opacity(0.5)
   
   .checkbox
-    :width $ninesixty_gutter_width * 50
     :line-height $baseline * 1.5
     :font
       :size $baseline * 0.9
     :padding
-      :left $ninesixty_gutter_width
+      :left $ninesixty_gutter_width * 3
     +children-inline
     
     > input
@@ -97,6 +115,21 @@ form
       > a
         +inverse-hover-underline
         :color $lightest_blue
+    
+    & + *
+      :margin
+        :top $baseline * 2.5
+  
+  ul
+    +children-inline
+    
+    > li + *
+      :margin
+        :left $ninesixty_gutter_width * 3
+  
+    ul > li:not(:first-child) .checkbox
+      :padding
+        :left 0
     
     & + *
       :margin

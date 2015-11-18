@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Manyanya">
   {% include head.html %}
   <body>
-    <div id="container">
+    <div id="container" ng-controller="AppCtrl">
       {% include header.html %}
       <div class="content {{page.navigation}}">
         <section>
@@ -11,5 +11,7 @@
         </section>
       </div>
     </div>
+    <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

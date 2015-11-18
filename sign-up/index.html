@@ -3,27 +3,169 @@ layout: default
 navigation: sign-up
 ---
 
-<form>
-  <label for="name">Имя и Фамилия</label>
-  <div class="field">
-    <input type="text" id="name" name="name" required placeholder="Марина Пирожкова" />
-  </div>
-  <label for="message">Номер телефона</label>
-  <div class="field">
-    <input type="text" id="phone" name="phone" required placeholder="Введите номер телефона" />
-  </div>
-  <label for="email">Ваша электронная почта</label>
-  <div class="field">
-    <input type="email" id="email" name="email" required placeholder="maripiro@hotbox.com" />
-  </div>
-  <label for="message">Примечания</label>
-  <div class="field">
-    <textarea id="message" name="message" placeholder="Возраст ребёнка, домашние животные
-или что-то ещё…"></textarea>
-  </div>
-  <div class="checkbox">
-    <input type="checkbox" name="agree" id="agree" value="yes" required />
-    <label for="agree">Я принимаю <a href="#">условия соглашения</a> клуба маняня</label>
-  </div>
-  <input type="submit" value="Отправить" />
-</form>
+<div class="form">
+  <form name="signUpForm">
+    <label for="name" class="field-label">Имя и Фамилия</label>
+    <div class="field">
+      <input type="text" id="name" name="name" ng-model="signUp.name" ng-required="true" placeholder="Ваше имя и фамилия" />
+    </div>
+    <label for="message" class="field-label">Номер телефона</label>
+    <div class="field">
+      <input type="text" id="phone" name="phone" ng-model="signUp.phone" ng-required="true" placeholder="Ваш номер телефона" />
+    </div>
+    <label for="email" class="field-label">Электронная почта</label>
+    <div class="field">
+      <input type="email" id="email" name="email" ng-model="signUp.email" ng-required="true" placeholder="Ваша электронная почта" />
+    </div>
+    <div class="form-group" ng-if="signUpTab == 'parent'">
+      <label for="message" class="field-label">Примечания</label>
+      <div class="field">
+        <textarea id="message" name="message" placeholder="Возраст ребёнка, домашние животные или что-то ещё…"></textarea>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="agree" id="agree" value="yes" ng-model="signUp.agree" ng-required="true" />
+        <label for="agree">Я принимаю <a href="#">условия соглашения</a> клуба маняня</label>
+      </div>
+    </div>
+    <div class="form-group" ng-if="signUpTab == 'jobseeker'">
+      <label for="citizenship" class="field-label">Гражданство</label>
+      <div class="field">
+        <input type="text" id="citizenship" name="citizenship" ng-model="signUp.citizenship" ng-required="true" placeholder="Ваше гражданство" />
+      </div>
+      <label for="place_of_birth" class="field-label">Место рождения</label>
+      <div class="field">
+        <input type="text" id="place_of_birth" name="place_of_birth" ng-model="signUp.place_of_birth" ng-required="true" placeholder="Город, республика, посёлок..." />
+      </div>
+      <ul>
+        <li>
+          <label for="place_of_living_now" class="field-label">Место фактического проживания</label>
+          <div class="field">
+            <input type="text" id="place_of_living_now" name="place_of_living_now" ng-model="signUp.place_of_living_now" ng-required="true" placeholder="Введите адрес" />
+          </div>
+        </li>
+        <li>
+          <label for="place_of_living_passport" class="field-label">Место прописки по паспорту</label>
+          <div class="field">
+            <input type="text" id="place_of_living_passport" name="place_of_living_passport" ng-model="signUp.place_of_living_passport" ng-required="true" placeholder="Введите адрес" />
+          </div>
+        </li>
+      </ul>
+      <label for="job_experience" class="field-label big">Опыт работы</label>
+      <div class="field big">
+        <input type="text" id="job_experience" name="job_experience" ng-model="signUp.job_experience" ng-required="true" placeholder="Месяцев, лет, какая профессия. Наличие трудовой книжки." />
+      </div>
+      <ul>
+        <li>
+          <label class="field-label">Наличие рекомендаций</label>
+          <ul>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="recomendations" id="recomendations_yes" value="yes" />
+                <label for="recomendations_yes">Да</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="recomendations" id="recomendations_no" value="no" checked />
+                <label for="recomendations_no">Нет</label>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label class="field-label">Наличие медицинской книги</label>
+          <ul>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="med_book" id="med_book_yes" value="yes" />
+                <label for="med_book_yes">Да</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="med_book" id="med_book_no" value="no" checked />
+                <label for="med_book_no">Нет</label>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <label for="family" class="field-label big">Семейное положение</label>
+      <div class="field big">
+        <input type="text" id="family" name="family" ng-model="signUp.family" ng-required="true" placeholder="Ваш семейный статус, дети" />
+      </div>
+      <label for="message" class="field-label big">Ваши пожелания к условиям работы</label>
+      <div class="field big">
+        <textarea id="message" name="message" placeholder="Возраст ребенка, кол-во детей в семье, территориальная расположенность, график, круг обязанностей, отношение к домашним животным…"></textarea>
+      </div>
+      <label for="salary" class="field-label big">Зарплатные ожидания</label>
+      <div class="field big">
+        <input type="text" id="salary" name="salary" ng-model="signUp.salary" ng-required="true" placeholder="Сумма, сроки выплат" />
+      </div>
+      <ul>
+        <li>
+          <label class="field-label">Наличие загранпаспорта</label>
+          <ul>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="passport" id="passport_yes" value="yes" />
+                <label for="passport_yes">Да</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="passport" id="passport_no" value="no" checked />
+                <label for="passport_no">Нет</label>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label class="field-label">Наличие водительских прав</label>
+          <ul>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="driver_license" id="driver_license_yes" value="yes" />
+                <label for="driver_license_yes">Да</label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <input type="radio" name="driver_license" id="driver_license_no" value="no" checked />
+                <label for="driver_license_no">Нет</label>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <label for="languages" class="field-label big">Владение иностранными языками</label>
+      <div class="field big">
+        <input type="text" id="languages" name="languages" ng-model="signUp.languages" ng-required="true" placeholder="Какие языки знаете? Уровень знания." />
+      </div>
+      <label for="instruments" class="field-label big">Владение музыкальными инструментами</label>
+      <div class="field big">
+        <input type="text" id="instruments" name="instruments" ng-model="signUp.instruments" ng-required="true" placeholder="Какие музыкальные инструменты знаете? Уровень знания." />
+      </div>
+      <label class="field-label big">
+        Хотели бы Вы пройти бесплатный промо-тренинг
+        <br />
+        «Няня. Введение в основы детский психологии»?
+      </label>
+      <ul>
+        <li>
+          <div class="checkbox">
+            <input type="radio" name="traning" id="traning_yes" value="yes" />
+            <label for="traning_yes">Да</label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox">
+            <input type="radio" name="traning" id="traning_no" value="no" checked />
+            <label for="traning_no">Нет</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <input type="submit" value="Отправить" ng-disabled="signUpForm.$invalid" />
+  </form>
+</div>
