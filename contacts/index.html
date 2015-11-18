@@ -31,7 +31,9 @@ navigation: contacts
   </span>
 </p>
 <h2>Обратная связь</h2>
-<form name="contactsForm">
+<form name="contactsForm" action="http://formspree.io/{{site.email}}" method="POST">
+  <input type="hidden" name="_subject" value="Обратная связь" />
+  <input type="hidden" name="_next" value="{{'/success' | prepend: site.baseurl | prepend: site.url}}" />
   <label for="email" class="field-label">Ваша электронная почта</label>
   <div class="field">
     <input type="email" id="email" name="email" ng-model="contacts.email" ng-required="true" placeholder="Ваша электронная почта" />

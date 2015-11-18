@@ -4,7 +4,9 @@ navigation: sign-up
 ---
 
 <div class="form">
-  <form name="signUpForm">
+  <form name="signUpForm" action="http://formspree.io/{{site.email}}" method="POST">
+    <input type="hidden" name="_subject" value="Заявка: //signUpTab == 'parent' ? 'Родителя' : 'Соискателя'//" />
+    <input type="hidden" name="_next" value="{{'/success' | prepend: site.baseurl | prepend: site.url}}" />
     <label for="name" class="field-label">Имя и Фамилия</label>
     <div class="field">
       <input type="text" id="name" name="name" ng-model="signUp.name" ng-required="true" placeholder="Ваше имя и фамилия" />

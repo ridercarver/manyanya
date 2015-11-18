@@ -11,17 +11,22 @@ $footer: $baseline * 9
   :color $white
   :background $light_blue url(../images/backgrounds/welcome_header.png) left top
   
-  a
+  a:not(.swag)
     :color $lightest_blue
+    +hover-underline
     
     > span
       :color $white
   
-  > svg
+  .swag
     :position absolute
     :height 50%
     :right 0
     :bottom 0
+    +hover-opacity
+    
+    > svg
+      :height 100%
   
   > section, > aside
     +grid-container($ninesixty_gutter_width * 100)
