@@ -1,6 +1,6 @@
 /* header
-$header: $baseline * 12
-$big_header: $baseline * 14
+$header: $baseline * 7
+$big_header: $baseline * 9.5
 
 #container:not(.welcome) > header
   :height $header
@@ -42,7 +42,7 @@ $big_header: $baseline * 14
     :position relative
     :z-index 2
     :margin
-      :top $baseline * 3.5
+      :top $baseline * 2
     +children-inline
     
     > nav
@@ -83,7 +83,7 @@ $big_header: $baseline * 14
   &.sign-up
     :height $big_header
     :padding
-      :bottom ($big_header - $navigation) / 2 + ($big_header - $navigation) / 2 - ($header - $navigation) / 2
+      :bottom ($big_header - $navigation) - ($header - $navigation) / 2
     
     & + .content
       :margin
@@ -96,12 +96,13 @@ $big_header: $baseline * 14
     :padding
       :top $baseline
       :bottom $baseline
+    :height $baseline * 14
     
     > *
       :display block
     
     > h1
-      :height $header - $navigation * 2 - $baseline * 4
+      :height $navigation
       
       & + *
         :margin
@@ -120,7 +121,20 @@ $big_header: $baseline * 14
       :margin
         :top $baseline
     
+    & + .content
+      :margin
+        :top -$baseline * 14
+      :padding
+        :top $baseline * 14
+    
     &.sign-up
       :padding
         :top $baseline
         :bottom $baseline
+      :height $baseline * 15.5
+    
+      & + .content
+        :margin
+          :top -$baseline * 15.5
+        :padding
+          :top $baseline * 15.5
