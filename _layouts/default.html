@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="Manyanya">
+<html ng-app="Manyanya" ng-controller="AppCtrl">
   {% include head.html %}
   <body>
-    <div id="container" ng-controller="AppCtrl">
+    <div id="container">
       {% include header.html %}
       <div class="content {{page.navigation}}">
-        <section>
+        <section next="{{page.next}}">
           {{ content }}
           {% include footer.html %}
         </section>

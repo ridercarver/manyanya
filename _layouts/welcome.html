@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Manyanya">
   {% include head.html %}
   <body>
-    <div id="container" class="welcome">
+    <div id="container" class="welcome" next="{{page.next}}">
       {{ content }}
     </div>
+    <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>
